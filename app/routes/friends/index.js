@@ -5,12 +5,6 @@ export default Ember.Route.extend({
 		return this.store.findAll('friend');
 		// return this.store.find('friend', 2140);
 		// return this.store.findQuery('friend', {active: true});
-	},
-	actions: {
-		delet: function(friend) {
-			friend.destroyRecord();
-			return false;
-		}
 	}
 });
 
