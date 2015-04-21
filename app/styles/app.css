@@ -28,7 +28,5 @@ h3#thumbnail-label { text-transform: capitalize; }
   background-color: rgba(217, 83, 79, 0.1); /* Same color as the left border with reduced alpha to 0.1 */
 }
 
-.danger strong {
-  color:  #d9534f;
-}
-li.list-group-item small { display: inline; }
+.danger strong {color:#d9534f;}
+li.list-group-item small {display:inline;}
