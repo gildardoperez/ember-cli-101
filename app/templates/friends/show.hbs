@@ -1,7 +1,57 @@
-<ul>
-<li>First Name: {{model.firstName}}</li>
-<li>Last Name: {{model.lastName}}</li>
-<li>Email: {{model.email}}</li>
-<li>twitter: {{model.twitter}}</li>
-</ul>
+<div class="container">
+    <ul class="nav nav-pills">
+      <li role="presentation" class="active">{{#link-to 'friends.new'}}+ Add New Friend{{/link-to}}</li>
+      <li role="presentation">{{#link-to 'friends.index'}}Back to Friends Index{{/link-to}}</li>
+      <!-- <li role="presentation" class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
+          Settings <span class="caret"></span>
+        </a>
+         <ul class="dropdown-menu" role="menu">
+          <li>{{#link-to 'friends.edit'}}Edit User{{/link-to}}</li>
+          <li><a href="#">Another action</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li class="divider"></li>
+          <li><a href="#">Separated link</a></li>
+        </ul> 
+      </li> -->
+      <li role="presentation">{{link-to "Edit info" "friends.edit" model}}</li>
+    </ul>
+<br>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6">
+            <div class="well well-sm">
+                <div class="row">
+                    <div class="col-sm-6 col-md-4">
+                        <img src="http://placehold.it/380x500" alt="" class="img-rounded img-responsive" />
+                    </div>
+                    <div class="col-sm-6 col-md-8">
+                        <h4 style="text-transform: capitalize;">{{model.firstName}} {{model.lastName}}</h4>
+                            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
+                        <small><cite title="San Francisco, USA">Santa Monica, USA <i class="glyphicon glyphicon-map-marker">
+                        </i></cite></small>
+                        <p>
+                            <i class="glyphicon glyphicon-envelope"></i>{{model.email}}</p>
+                        <!-- Split button -->
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-primary">
+                                Social</button>
+                            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                <span class="caret"></span><span class="sr-only">Social</span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="https://twitter.com/{{model.twitter}}">Twitter</a></li>
+                                <li><a href="https://plus.google.com/+Jquery2dotnet/posts">Google +</a></li>
+                                <li><a href="https://www.facebook.com/jquery2dotnet">Facebook</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Github</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {{outlet}}
