@@ -1,27 +1,27 @@
 <div class="container">
-<ul class="nav nav-pills">
-  <li role="presentation" class="active">{{#link-to 'friends.new'}}+ Add New Friend{{/link-to}}</li>
-</ul>
-<br>
 <div class="panel panel-default">
-      <!-- Default panel contents -->
-      <div class="panel-heading">Friends Index</div>
-      <div class="panel-body">
-      <button class="btn btn-success" type="button">Total friends: <span class="badge">{{model.length}}</span></button>
-      </div>
 
-      <!-- List group -->
-      <ul class="list-group">
-		{{#each friend in model}}
-			<li class="list-group-item">
-				{{link-to friend.fullName 'friends.show' friend}} | <small>{{link-to "Edit" "friends.edit" model}}</small>
-
-        <a href="#" {{action "delete" friend}}><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></a>
-			</li>
-		{{/each}}
-      </ul>
+ <div class="panel-heading">Friends Index</div>
+  <div class="panel-body">
+    <button class="btn btn-success" type="button">Total friends: <span class="badge">{{model.length}}</span></button>
+  </div>
+      <table class="table">
+<thead>
+<tr>
+<th>Name</th>
+<th>Articles</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+{{#each friend in model}}
+<tr>
+<td>{{link-to friend.fullName "articles" friend}}</td>
+<td>{{friend.totalArticles}}</td>
+<td><a href="#" {{action "delete" friend}}><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></a></td>
+</tr>
+{{/each}}
+</tbody>
+</table>
     </div>
 </div>
-    {{! #link-to 'friends.show' friend}}
-				{{! friend.firstName}} {{! friend.lastName}}
-			{{! /link-to}}

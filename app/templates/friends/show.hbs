@@ -1,37 +1,14 @@
-<div class="container"><
-    <ul class="nav nav-pills">
-      <li role="presentation" class="active">{{#link-to 'friends.new'}}+ Add New Friend{{/link-to}}</li>
-      <li role="presentation">{{#link-to 'friends.index'}}Back to Friends Index{{/link-to}}</li>
-      <!-- <li role="presentation" class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
-          Settings <span class="caret"></span>
-        </a>
-         <ul class="dropdown-menu" role="menu">
-          <li>{{#link-to 'friends.edit'}}Edit User{{/link-to}}</li>
-          <li><a href="#">Another action</a></li>
-          <li><a href="#">Something else here</a></li>
-          <li class="divider"></li>
-          <li><a href="#">Separated link</a></li>
-        </ul> 
-      </li> -->
-      <li role="presentation">{{link-to "Edit info" "friends.edit" model}}</li>
-    </ul>
-<br>
-</div>
 <div class="container">
-    <div class="row">
+    <div class="row">      
         <div class="col-xs-12 col-sm-6 col-md-6">
             <div class="well well-sm">
                 <div class="row">
                     <div class="col-sm-6 col-md-5">
                         <img src="https://d13yacurqjgara.cloudfront.net/users/31752/screenshots/2027545/antione_1x.png" alt="" class="img-rounded img-responsive" />
                     </div>
-                    <div class="col-sm-6 col-md-7">
+                    <div class="col-sm-6 col-md-5">
                         <h4 style="text-transform: capitalize;">{{model.firstName}} {{model.lastName}}</h4>
-                        <small><cite title="San Francisco, USA">Santa Monica, USA <i class="glyphicon glyphicon-map-marker">
-                        </i></cite></small>
-                        <p>
-                            <i class="glyphicon glyphicon-envelope"></i>{{model.email}}</p>
+                        <p><i class="glyphicon glyphicon-envelope"></i>{{model.email}}</p>
                         <!-- Split button -->
                         <div class="btn-group">
                             <button type="button" class="btn btn-primary">
@@ -46,11 +23,17 @@
                                 <li class="divider"></li>
                                 <li><a href="#">Github</a></li>
                             </ul>
-                        </div>
+                        </div><br><br>
+                     {{link-to "Edit info" "friends.edit" model}}
                     </div>
+                     <div class="col-sm-6 col-md-2"><div class="pull-right">
+                     <button href="#" {{action "delete" model }} class="btn btn-danger">X</button>
+                     </div></div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<div class="articles-container">
 {{outlet}}
+</div>

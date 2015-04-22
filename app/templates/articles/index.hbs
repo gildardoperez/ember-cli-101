@@ -1,0 +1,21 @@
+<table class="table">
+	<thead>
+		<tr>
+			<th>Description</th>
+			<th>Borrowed since</th>
+			<th></th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		{{#each article in model}}
+			<tr>
+				<td>{{article.description}}</td>
+				<td>{{article.createdAt}}</td>
+				<td></td>
+				<td></td>
+			</tr>
+		{{/each}}
+	</tbody>
+</table>
+{{outlet}}
