@@ -24,6 +24,7 @@ You will need the following things properly installed on your computer.
 
 * `ember server`
 * Visit your app at [http://localhost:4200](http://localhost:4200).
+* `ember server --proxy http://api.ember-cli-101.com`
 
 ### Code Generators
 
