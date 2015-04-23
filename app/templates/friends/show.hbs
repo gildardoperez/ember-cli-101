@@ -26,8 +26,9 @@
                         </div><br><br>
                         <span class="small">{{link-to "Lend article" "articles.new"}} | {{link-to "Edit info" "friends.edit" model}}</span>
                     </div>
-                     <div class="col-sm-6 col-md-2"><div class="pull-right">
-                     <button href="#" {{action "delete" model }} class="btn btn-danger">x</button>
+                     <div class="col-sm-6 col-md-2">
+                        <div class="pull-right">
+                            <a href="#" {{action "delete" model}}><button type="button" class="btn btn-danger" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></a>
                      </div></div>
                 </div>
             </div>
