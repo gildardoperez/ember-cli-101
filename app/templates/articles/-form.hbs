@@ -3,9 +3,9 @@
 	<div class="form-group">
 		{{input class="form-control" value=model.description placeholder="Description"}}<br>
 		{{input class="form-control" value=model.notes placeholder="Notes"}}<br>
-		<span style="color: #a94442;display:block;margin-bottom:15px;">{{errorMessage}}</span><br>
-		<button {{action "save"}} class="primary">Save</button>
-		<button {{action "cancel"}}>Cancel</button>
+		<span style="color: #a94442;display:block;margin-bottom:15px;">{{errorMessage}}</span>
+		<button {{action "save"}} class="btn btn-primary btn-sm">Save</button>
+		<button {{action "cancel"}} class="btn btn-default btn-sm">Cancel</button>
 	</div>
 	</fieldset>
 </form>
