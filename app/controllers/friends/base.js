@@ -15,7 +15,7 @@ export default Ember.ObjectController.extend({
     save: function() {
       if (this.get('isValid')) {
         var _this = this;
-        this.get('model').save().then(function(friend) {
+        this.get('model').save().then(function() {
           _this.transitionToRoute('friends');
         });
         return true;
