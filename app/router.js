@@ -19,4 +19,6 @@ Router.map(function() {
     });
     this.route('edit', { path: ':friend_id/edit' });
   });
+  this.resource('tut1', function() {});
+  this.resource('tut2', function() {});
 });
