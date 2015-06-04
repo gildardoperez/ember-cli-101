@@ -17,6 +17,18 @@ var app = new EmberApp();
 // please specify an object with the list of modules as keys
 // along with the exports of each module as its value.
 
+app.import('bower_components/ic-ajax/dist/named-amd/main.js', {
+exports: {
+'ic-ajax': [
+'default',
+'defineFixture',
+'lookupFixture',
+'raw',
+'request',
+]
+}
+});
+app.import('bower_components/moment/moment.js');
 app.import('vendor/fontello/fontello.css');
 app.import('vendor/fontello/font/fontello.ttf', {
 	destDir: 'font'
