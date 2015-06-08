@@ -36,5 +36,8 @@
     "ic-ajax": "2.0.2",
     "liquid-fire": "^0.19.3",
     "moment": "^2.10.3"
+  },
+  "dependencies": {
+    "ember-cli-fill-murray": "^0.1.0"
   }
 }

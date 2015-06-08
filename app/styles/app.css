@@ -30,3 +30,16 @@ h3#thumbnail-label { text-transform: capitalize; }
 
 .danger strong {color:#d9534f;}
 li.list-group-item small {display:inline;}
+
+.friend-profile{
+text-align: left;
+}
+.friend-profile img {
+float:left;
+margin:1em 2em 1em 1em;
+}
+.friend-profile-links li {
+display: inline;
+list-style-type: none;
+padding-right: 20px;
+}
