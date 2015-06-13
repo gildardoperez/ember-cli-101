@@ -1,8 +1,15 @@
 import DS from 'ember-data';
 import Ember from 'ember';
+import changeGate from 'ember-computed-change-gate/change-gate';
 
 export default DS.Model.extend({
-	articles: DS.hasMany('article', {async: true}),
+  //
+  // Currently changeGate only support one property
+  //
+  capitalizedFirstName: changeGate('firstName', function(firstName) {
+  return Ember.String.capitalize(firstName);
+  }),
+	articles: DS.hasMany('articles', {async: true}),
 	firstName: DS.attr('string'),
 	lastName: DS.attr('string'),
 	email: DS.attr('string'),

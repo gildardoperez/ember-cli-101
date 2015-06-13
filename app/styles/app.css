@@ -1,4 +1,4 @@
-body{padding-top:30px;}
+body{padding:30px 0 50px;}
 
 .glyphicon {  margin-bottom: 10px;margin-right: 10px;}
 
@@ -9,7 +9,7 @@ color: #999;
 }
 
 ul.list-unstyled li.lead { margin-bottom: 0; }
-h3#thumbnail-label { text-transform: capitalize; }
+h3#thumbnail-label { }
 .oaerror {
   width: 90%; /* Configure it fit in your design  */
   margin: 0 auto; /* Centering Stuff */
@@ -31,15 +31,6 @@ h3#thumbnail-label { text-transform: capitalize; }
 .danger strong {color:#d9534f;}
 li.list-group-item small {display:inline;}
 
-.friend-profile{
-text-align: left;
-}
-.friend-profile img {
-float:left;
-margin:1em 2em 1em 1em;
-}
-.friend-profile-links li {
-display: inline;
-list-style-type: none;
-padding-right: 20px;
+table thead tr {
+cursor: pointer;
 }

@@ -1,0 +1,9 @@
+<div class="navbar navbar-default navbar-fixed-bottom">
+    <div class="container">
+      <ul class="nav navbar-nav">
+      <li>{{#link-to 'friends' (query-params sortBy="totalArticles")}}Friends Sorted by total Articles{{/link-to}}</li>
+      <li>{{#link-to 'friends' (query-params sortBy="firstName")}}Friends Sorted by First Name{{/link-to}}</li>
+      <li>{{#link-to 'friends' (query-params sortBy="lastName")}}Friends Sorted by Last Name{{/link-to}}</li>
+      </ul>
+    </div>
+</div>
